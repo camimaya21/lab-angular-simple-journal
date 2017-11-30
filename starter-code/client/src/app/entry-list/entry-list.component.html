@@ -1,5 +1,7 @@
 <ul>
   <li *ngFor="let entradas of entry">
     <h2>{{entradas.title}}</h2>
+    <p>{{entradas.date}}</p>
+    <a [routerLink]="['journal-entries', entradas._id]"> View Details </a>
   </li>
 </ul>

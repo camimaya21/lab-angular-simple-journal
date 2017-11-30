@@ -16,15 +16,10 @@ export class JournalService {
       return this.http.get(BASEURL)
                       .map(res => res.json());
   }
-  //
-  // getPhoneByID(id):Observable<any>{
-  //     return this.http.get(`${BASEURL}/${id}`)
-  //                     .map(res => res.json());
-  // }
-  //
-  // deletePhone(id){
-  //     return this.http.delete(`${BASEURL}/${id}`)
-  //                     .map(res => res.json());
-  // }
+
+  getEntryByID(id):Observable<any>{
+      return this.http.get(`${BASEURL}/${id}`)
+                      .map(res => res.json());
+  }
 
 }
